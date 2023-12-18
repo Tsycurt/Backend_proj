@@ -1,0 +1,404 @@
+{
+	"info": {
+		"_postman_id": "14416b87-09b5-47ae-8263-4f8d7ac7916b",
+		"name": "Cards Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20552270",
+		"_collection_link": "https://galactic-comet-908137.postman.co/workspace/user~27b8fbb8-9b54-4a2e-94b2-53ba0514532d/collection/20552270-14416b87-09b5-47ae-8263-4f8d7ac7916b?action=share&source=collection_link&creator=20552270"
+	},
+	"item": [
+		{
+			"name": "User Routes",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":{\"first\":\"first\",\"middle\":\"\",\"last\":\"user\"},\r\n    \"isBusiness\":true,\r\n    \"phone\":\"050-0000000\",\r\n    \"email\":\"first14@gmail.com\",\r\n    \"password\":\"Abc1234!\",\r\n    \"address\":{\"state\":\"\",\"country\":\"isael\",\"city\":\"tel-aviv\",\"street\":\"magnive\",\"houseNumber\":\"5\"},\r\n    \"image\":{\"url\":\"https://res.cloudinary.com/dlpjcvsii/image/upload/v1688459756/file-upload/tmp-1-1688459755587_hvt1fy.png\",\"alt\":\"\"}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"first1234@gmail.com\",\r\n    \"password\":\"Abc1234!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/users/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Users",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":{\"first\":\"first\",\"middle\":\"\",\"last\":\"user\"},\r\n    \"isBusiness\":true,\r\n    \"phone\":\"050-0000000\",\r\n    \"email\":\"first@gmail.com\",\r\n    \"password\":\"Abc1234!\",\r\n    \"address\":{\"state\":\"\",\"country\":\"israel\",\"city\":\"tel-aviv\",\"street\":\"magnive\",\"houseNumber\":\"5\"},\r\n    \"image\":{\"url\":\"https://res.cloudinary.com/dlpjcvsii/image/upload/v1688459756/file-upload/tmp-1-1688459755587_hvt1fy.png\",\"alt\":\"\"}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single User",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":{\"first\":\"first\",\"middle\":\"\",\"last\":\"user\"},\r\n    \"isBusiness\":true,\r\n    \"phone\":\"050-0000000\",\r\n    \"email\":\"first@gmail.com\",\r\n    \"password\":\"Abc1234!\",\r\n    \"address\":{\"state\":\"\",\"country\":\"israel\",\"city\":\"tel-aviv\",\"street\":\"magnive\",\"houseNumber\":\"5\"},\r\n    \"image\":{\"url\":\"https://res.cloudinary.com/dlpjcvsii/image/upload/v1688459756/file-upload/tmp-1-1688459755587_hvt1fy.png\",\"alt\":\"\"}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/users/657f76e8256da842fa9a1eb6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"users",
+								"657f76e8256da842fa9a1eb6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":{\"first\":\"first\",\"middle\":\"\",\"last\":\"new\"},\r\n    \"isBusiness\":true,\r\n    \"phone\":\"050-0000000\",\r\n    \"email\":\"first1234@gmail.com\",\r\n    \"password\":\"Abc1234!\",\r\n    \"address\":{\"state\":\"\",\"country\":\"israel\",\"city\":\"tel-aviv\",\"street\":\"magnive\",\"houseNumber\":\"5\"},\r\n    \"image\":{\"url\":\"https://res.cloudinary.com/dlpjcvsii/image/upload/v1688459756/file-upload/tmp-1-1688459755587_hvt1fy.png\",\"alt\":\"\"}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/users/657f7ba71ba0282f403788f0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"users",
+								"657f7ba71ba0282f403788f0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update IsBusiness",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"isBusiness\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/users/657f76e8256da842fa9a1eb6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"users",
+								"657f76e8256da842fa9a1eb6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"isBusiness\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/users/657f76ff256da842fa9a1ebb",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"users",
+								"657f76ff256da842fa9a1ebb"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/users/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"users",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Card Routes",
+			"item": [
+				{
+					"name": "Create Card",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"test123\",\r\n    \"subtitle\":\"testing\",\r\n    \"phone\":\"050-0000000\",\r\n    \"email\":\"first1@gmail.com\",\r\n     \"description\":\"testing 123456789\",\r\n    \"web\":\"https://www.tesst.com\",\r\n    \"address\":{\"state\":\"state\",\"country\":\"israel\",\"city\":\"tel-aviv\",\"street\":\"magnive\",\"houseNumber\":3,\"zip\":0},\r\n    \"image\":{\"url\":\"https://res.cloudinary.com/dlpjcvsii/image/upload/v1688459756/file-upload/tmp-1-1688459755587_hvt1fy.png\",\"alt\":\"asdf\"}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/cards",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"cards"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Cards",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/cards",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"cards"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get My Cards",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/cards/my-cards",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"cards",
+								"my-cards"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Cards By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/cards/657f67d81ea63cba39e6e139",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"cards",
+								"657f67d81ea63cba39e6e139"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Card",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/cards/657f67d81ea63cba39e6e139",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"cards",
+								"657f67d81ea63cba39e6e139"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Like Card",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/cards/657f713d2ab19c1e569fb573",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"cards",
+								"657f713d2ab19c1e569fb573"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Card",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"test123 updated\",\r\n    \"subtitle\":\"testing\",\r\n    \"phone\":\"050-0000000\",\r\n    \"email\":\"first1@gmail.com\",\r\n     \"description\":\"testing 123456789\",\r\n    \"web\":\"https://www.tesst.com\",\r\n    \"address\":{\"state\":\"state\",\"country\":\"israel\",\"city\":\"tel-aviv\",\"street\":\"magnive\",\"houseNumber\":3,\"zip\":0},\r\n    \"image\":{\"url\":\"https://res.cloudinary.com/dlpjcvsii/image/upload/v1688459756/file-upload/tmp-1-1688459755587_hvt1fy.png\",\"alt\":\"asdf\"}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/cards/657f6866a94057b9fd982ec5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"cards",
+								"657f6866a94057b9fd982ec5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
